@@ -24,7 +24,7 @@ var marvel = {
 
                     string += "<div class = 'col-md-3'>";
                     string += " <a href='" + element.urls[0].url + "' target='_blank'> "
-                    string += "  <img src= ' "+ element.thumbnail.path + "/portrait_fantastic." +element.thumbnail.extension+ "' />";
+                    string += "  <img src= ' "+ element.thumbnail.path + "/portrait_xlarge." +element.thumbnail.extension+ "' />";
                     string += "</a>";
                     string += "<h3>" + element.name + "</h3>";
                     string += "</div>";
