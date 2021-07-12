@@ -17,22 +17,32 @@ var marvel = {
             success: function(data){
                 footer.innerHTML = data.attributionHTML;
                 var string = "";
-                string += "<div class='row'>";
+                //string += "<div class='row'>";
 
                 for(var i = 0; i<data.data.results.length; i++){
                     var element = data.data.results[i];
 
-                    string += "<div class = 'col-md-3'>";
-                    string += " <a href='" + element.urls[0].url + "' target='_blank'> "
-                    string += "  <img src= ' "+ element.thumbnail.path + "/portrait_xlarge." +element.thumbnail.extension+ "' />";
-                    string += "</a>";
-                    string += "<h3>" + element.name + "</h3>";
-                    string += "</div>";
+                    //string += "<div class = 'col-md-3'>";
+                    //string += "<div class = 'row'>"
+                    //string += "<div class = 'column'>"
 
-                    if((i+1) % 4 == 0){
-                        string += "</div>";
-                        string += "<div class='row'>";
-                    }
+                    string += " <a href='" + element.urls[0].url + "' target='_blank'> "
+
+                    string += "  <img src= ' "+ element.thumbnail.path + "/portrait_xlarge." +element.thumbnail.extension+ "' />";
+                    
+                    string += "</a>";
+
+                    //images in rows of 4 without this line, but no names
+                    string += "<h3>" + element.name + "</h3>"; //names
+
+                    //string += "</div>";
+
+                    //string += "</div>";
+
+                    //if((i+1) % 4 == 0){
+                        //string += "</div>";
+                        //string += "<div class='row'>";
+                    //}
                 }
 
                 marvelContainer.innerHTML = string;
